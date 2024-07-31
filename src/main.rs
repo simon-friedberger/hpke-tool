@@ -12,7 +12,7 @@ fn print_key(key_by: &GenericArray<u8, typenum::U32>, name: &str) {
     println!("Key ({}):", name);
     println!("  hex: {:x}", key_by);
     let key_b64 = general_purpose::URL_SAFE_NO_PAD.encode(key_by);
-    println!("  b64: {:?}", key_b64);
+    println!("  b64: {}", key_b64);
 }
 
 fn generate_keys() {
